@@ -1,51 +1,66 @@
-<header>
-  <img src="../assets/imgs/Heavenly Patties.png" alt="Big Patties Burger Shack">
+<div class="container">
+  <div class="row">
 
-  <div id="add-burger">
-    <h1>CREATE YOUR BURGER</h1>
-    <form class="create-form">
+    <div class="col-sm-6">
 
-      <div class="form-group">
-        <label for="burg">Burger name:</label>
-        <input type="text" id="burg" name="burger_name">
-      </div>
+      <img src="../assets/imgs/Heavenly Patties.png" alt="Big Patties Burger Shack">
 
-      <div class="form-group">
-        <label for="devoured">Burger state:</label><br>
-        <input type="radio" name="devoured" value=1 checked> Devoured!
-        <input type="radio" name="devoured" value=0> Ready to devour<br>
+    </div>
 
+    <div class="col-sm-6" id="add-burger">
 
-      </div>
+      <h2>Create a new burger</h2>
 
-      <button type="submit" class="add">Add Burger</button>
-    </form>
-  </div>
-</header>
+      <form class="create-form">
 
-<container>
-  <div id="ready">
-    <h2>Get 'em while they're hot!</h2>
+        <div class="form-group">
 
-    <ul>
-      {{#each burgers}}
-      {{#unless devoured}}
-      {{> burgers/burger-block devoured=0}}
-      {{/unless}}
-      {{/each}}
-    </ul>
-  </div>
+          <label for="burg">Burger name:</label>
+          <input type="text" id="burg" name="burger_name">
 
-  <div id="eaten">
-    <h2>Fancy another?</h2>
+        </div>
 
-    <ul>
-      {{#each burgers}}
-      {{#if devoured}}
-      {{> burgers/burger-block devoured=1}}
-      {{/if}}
-      {{/each}}
-    </ul>
+        <div class="form-group">
+
+          <label for="devoured">Burger state:</label><br>
+          <input type="radio" name="devoured" value=1 checked> Devoured!
+          <input type="radio" name="devoured" value=0> Ready to devour<br>
+
+        </div>
+
+        <button type="submit" class="add">Add Burger</button>
+      </form>
+
+    </div>
 
   </div>
-</container>
+
+  <div class="row">
+    <div class="col-sm-6" id="ready">
+      <h2>Get 'em while they're hot!</h2>
+
+      <ul class="a">
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=0}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-sm-6" id="eaten">
+      <h2>Fancy another?</h2>
+
+      <ul class="a">
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devoured=1}}
+        {{/if}}
+        {{/each}}
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
