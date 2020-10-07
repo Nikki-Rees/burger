@@ -1,6 +1,6 @@
-#Burger tracker
+# Burger tracker
 
-../assets/imgs/Screenshot 2020-10-07 at 16.34.19.png
+.![Screenshot 2020-10-07 at 16 34 19](https://user-images.githubusercontent.com/63279484/95294684-73d54880-08c1-11eb-83f8-a4137baa04d8.png)
 
 
 This app logs burgers and used MySQL, Node, Express, Handlebars and an ORM.
