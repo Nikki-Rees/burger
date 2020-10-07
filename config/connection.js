@@ -8,7 +8,7 @@ if (process.env.JAWSDB_URL) {
     connection = mysqlcreateConnection(process.env.JAWSDB_URL);
 }
 else {
-    const connection = mysql.createConnection({
+    connection = mysql.createConnection({
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
         user: process.env.DB_USER,
