@@ -1,11 +1,7 @@
 #Burger tracker
 
-![GitHub Logo](/images/logo.png)
-Format: ![Screenshot of app](public/assets/imgs/Screenshot 2020-10-07 at 16.34.19.png)
+../assets/imgs/Screenshot 2020-10-07 at 16.34.19.png
 
-
-http://github.com - automatic!
-[GitHub](http://github.com)
 
 This app logs burgers and used MySQL, Node, Express, Handlebars and an ORM.
 I have used an MVC structure.
