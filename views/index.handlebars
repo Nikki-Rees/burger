@@ -1,40 +1,51 @@
-<h1>Burgers!</h1>
+<header>
+  <img src="../assets/imgs/Heavenly Patties.png" alt="Big Patties Burger Shack">
 
-<h2>Burgers ready to eat!</h2>
+  <div id="add-burger">
+    <h1>CREATE YOUR BURGER</h1>
+    <form class="create-form">
 
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{> burgers/burger-block devoured=0}}
-  {{/unless}}
-  {{/each}}
-</ul>
+      <div class="form-group">
+        <label for="burg">Burger name:</label>
+        <input type="text" id="burg" name="burger_name">
+      </div>
 
-<h2>Already devoured!</h2>
+      <div class="form-group">
+        <label for="devoured">Burger state:</label><br>
+        <input type="radio" name="devoured" value=1 checked> Devoured!
+        <input type="radio" name="devoured" value=0> Ready to devour<br>
 
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> burgers/burger-block devoured=1}}
-  {{/if}}
-  {{/each}}
-</ul>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+      </div>
 
-  <div class="form-group">
-    <label for="burg">Burger name:</label>
-    <input type="text" id="burg" name="burger_name">
+      <button type="submit" class="add">Add Burger</button>
+    </form>
+  </div>
+</header>
+
+<container>
+  <div id="ready">
+    <h2>Get 'em while they're hot!</h2>
+
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burger-block devoured=0}}
+      {{/unless}}
+      {{/each}}
+    </ul>
   </div>
 
-  <div class="form-group">
-    <label for="devoured">Burger state:</label><br>
-    <input type="radio" name="devoured" value=1 checked> Devoured!
-    <input type="radio" name="devoured" value=0> Ready to devour<br>
+  <div id="eaten">
+    <h2>Fancy another?</h2>
 
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=1}}
+      {{/if}}
+      {{/each}}
+    </ul>
 
   </div>
-
-  <button type="submit" class="add">Add Burger</button>
-</form>
+</container>
